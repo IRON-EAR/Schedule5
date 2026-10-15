@@ -1,0 +1,34 @@
+:root {
+    --hue: 270;
+}
+
+.dateCard {
+    display: flex;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.dateCardBlocked {
+    background-color: hsl(var(--hue), 0%, 20%);
+}
+
+.dateCardActive {
+    background-color: hsl(var(--hue), 100%, 80%);
+}
+
+.dateTextHoliday {
+    color: hsl(var(--hue), 80%, 50%);
+    font-weight: bold;
+}
+
+.dateTextBlocked {
+    color: hsl(var(--hue), 0%, 100%);
+    font-weight: bold;
+}

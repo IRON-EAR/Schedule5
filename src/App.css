@@ -1,0 +1,106 @@
+:root {
+    --hue: 270;
+}
+
+.main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 24px 28px;
+    width: min(90vw, 420px);
+    border: none;
+    border-radius: 12px;
+    background: #ffff;
+    color: #1f2937;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    /* dim backdrop + dialog shadow */
+    box-shadow:
+        0 0 0 100vmax rgba(0, 0, 0, 0.5),
+        0 20px 40px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    animation: dialog-pop 0.18s ease-out;
+}
+
+.screenDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: block;
+    padding: 8px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: hsl(var(--hue), 80%, 50%);
+    color: #ffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.buttonSignout {
+    display: block;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    background: hsl(var(--hue), 80%, 50%);
+    color: #ffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.userText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #1f2937;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.datePicker {
+    align-self: center;
+    width: 80%;
+    padding: 10px;
+}
+
+.adminBlock {
+    display: flex;
+    gap: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-style: italic;
+}
+
+.admin-badge {
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    background: hsl(var(--hue), 80%, 50%);
+    color: #ffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}

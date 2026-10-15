@@ -1,0 +1,77 @@
+:root {
+    --hue: 270;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 24px 28px;
+    width: min(90vw, 420px);
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    color: hsl(var(--hue), 30%, 15%);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    /* dim backdrop + dialog shadow */
+    box-shadow:
+        0 0 0 100vmax rgba(0, 0, 0, 0.5),
+        0 20px 40px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    animation: dialog-pop 0.18s ease-out;
+}
+
+dialog h1 {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+dialog p {
+    margin: 0 0 24px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: hsl(var(--hue), 15%, 40%);
+}
+
+dialog button {
+    display: block;
+    margin-left: auto;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    background: hsl(var(--hue), 80%, 50%);
+    color: #ffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+dialog button:hover {
+    background: hsl(var(--hue), 80%, 50%);
+}
+
+dialog button:active {
+    transform: scale(0.97);
+}
+
+dialog button:focus-visible {
+    outline: 2px solid hsl(var(--hue), 95%, 80%);
+    outline-offset: 2px;
+}
+
+@keyframes dialog-pop {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}

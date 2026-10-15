@@ -1,0 +1,42 @@
+:root {
+    --hue: 270;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    padding: 10px;
+    gap: 10px;
+
+    border: none;
+    border-radius: 12px;
+    background: hsl(var(--hue), 20%, 90%);
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    color: hsl(var(--hue), 30%, 10%);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.calendarTitle {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.calendarSubtitle {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.shiftCount {
+    font-size: 0.9em;
+    text-align: right;
+    font-style: italic;
+}
+
+.buttonBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

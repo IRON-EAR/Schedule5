@@ -1,0 +1,21 @@
+:root {
+    --hue: 270;
+}
+
+.groupedDates {
+    border-radius: 12px;
+    padding: 10px;
+    background-color: hsl(var(--hue), 80%, 90%);         
+}
+
+
+.groupedDates span {    
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.groupedDates section {     
+    padding-left: 10px;
+}
+
